@@ -16,3 +16,7 @@ For example to run `ColorizeExample.swift`
 
     chmod a+x ColorizeExample.swift
     ./ColorizeExample.swift
+
+
+## Notes
+swift run komondor install

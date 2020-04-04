@@ -1,5 +1,3 @@
-#!/usr/bin/env xcrun swift -F ./Rome/ -framework Swiftline
-
 import Swiftline
 
 
@@ -13,7 +11,7 @@ let choice2 = choose("Whats your favorite programming language? ", type: Int.sel
     settings.addChoice("Swift") { 42 }
     settings.addChoice("Objective C") { 20 }
 }
-print("You choosed \(choice2)")
+print("You chose \(choice2)")
 
 
 // Customize prompt
