@@ -1,5 +1,6 @@
 import Swiftline
 
+print("\u{001B}[2J") // Clear screen does not work in lame Xcode terminal.
 
 // To change the text color, use either string.f or string.foreground:
 print("Red String".f.Red)

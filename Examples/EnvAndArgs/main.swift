@@ -1,9 +1,11 @@
 import Swiftline
 
 
+print("\u{001B}[2J") // Clear screen does not work in lame Xcode terminal.
+
 // print(Env.get("PWD")!)
 print("All Environment Variables")
-print(Env.keys.joinWithSeparator("\n"))
+print(Env.keys.joined(separator: "\n"))
 
 print("\nPrinting value of PWD")
 print(Env.get("PWD")!)

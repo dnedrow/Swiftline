@@ -1,5 +1,7 @@
 import Swiftline
 
+print("\u{001B}[2J") // Clear screen does not work in lame Xcode terminal.
+
 // Ask for a String
 let answer1 = ask("What's your name?")
 print("\nYour name is \(answer1)\n")

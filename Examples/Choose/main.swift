@@ -1,9 +1,10 @@
 import Swiftline
 
+print("\u{001B}[2J") // Clear screen does not work in lame Xcode terminal.
 
 let choice = choose("Whats your favorite programming language? ",
-        choices: "Swift", "Objective C", "Ruby", "Python", "Java :S")
-print("You choosed \(choice)")
+        choices: "Swift", "Objective C", "Ruby", "Python", "Java")
+print("You chose \(choice)")
 
 
 // Choose with Int result
@@ -22,7 +23,7 @@ let choice3 = choose("Whats your favorite programming language? ", type: String.
     //choice value will be set to BAD
     settings.addChoice("Java") { "BAD" }
 
-    settings.index = .Letters
+    settings.index = .letters
     settings.indexSuffix = " ----> "
 }
 print("Your choice is \(choice3)")
