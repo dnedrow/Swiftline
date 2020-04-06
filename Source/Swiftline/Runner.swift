@@ -9,7 +9,7 @@
 import Foundation
 
 
-class 🏃{
+class Runner {
     
     class func runWithoutCapture(_ command: String) -> Int {
         let initalSettings = RunSettings()
