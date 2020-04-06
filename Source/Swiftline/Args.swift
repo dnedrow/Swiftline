@@ -12,8 +12,8 @@ public class Args {
   
   /// Return the list of arguments passed to the script
     public static var all: [String] {
-    return ProcessInfo.arguments
-  }
+      return ProcessInfo.arguments
+    }
   
   static var cachedResults: ParsedArgs?
   

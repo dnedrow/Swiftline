@@ -25,7 +25,7 @@ extension StringStyle {
   func colorize(string: String) -> String {
     
     if hasAnyStyleCode(string) {
-      return colorizeStringAndAddCodeSeperators(string)
+      return colorizeStringAndAddCodeSeparators(string)
     } else {
       return colorizeStringWithoutPriorCode(string)
     }
@@ -35,7 +35,7 @@ extension StringStyle {
     return "\(preparedColorCode(self.rawValue))\(string)\(endingColorCode())"
   }
   
-  fileprivate func colorizeStringAndAddCodeSeperators(_ string: String) -> String {
+  fileprivate func colorizeStringAndAddCodeSeparators(_ string: String) -> String {
     //To refactor and use regex matching instead of replacing strings and using tricks
     let stringByRemovingEnding = removeEndingCode(string)
     let sringwWithStart = "\(preparedColorCode(self.rawValue))\(stringByRemovingEnding)"
@@ -69,46 +69,4 @@ extension StringStyle {
   fileprivate func endingColorCode() -> String {
     return preparedColorCode(0)
   }
-}
-
-
-enum ForegroundColor: Int, StringStyle {
-  
-  case black = 30
-  case red = 31
-  case green = 32
-  case yellow = 33
-  case blue = 34
-  case magenta = 35
-  case cyan = 36
-  case white = 37
-}
-
-
-enum BackgroundColor: Int, StringStyle {
-  
-  case black = 40
-  case red = 41
-  case green = 42
-  case yellow = 43
-  case blue = 44
-  case magenta = 45
-  case cyan = 46
-  case white = 47
-}
-
-
-enum StringTextStyle: Int, StringStyle {
-  
-  case reset = 0
-  case bold = 1
-  case italic = 3
-  case underline = 4
-  case inverse = 7
-  case strikethrough = 9
-  case boldOff = 22
-  case italicOff = 23
-  case underlineOff = 24
-  case inverseOff = 27
-  case strikethroughOff = 29
 }

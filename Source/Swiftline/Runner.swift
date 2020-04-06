@@ -26,14 +26,14 @@ class 🏃{
         return run(command, args: args, settings: settings)
     }
     
-    class func run(_ command: String, settings: ((RunSettings) -> Void)) -> RunResults {
+    class func run(_ command: String, settings: (RunSettings) -> Void) -> RunResults {
         let initalSettings = RunSettings()
         settings(initalSettings)
         
         return run(command, args: [], settings: initalSettings)
     }
     
-    class func run(_ command: String, args: [String], settings: ((RunSettings) -> Void)) -> RunResults {
+    class func run(_ command: String, args: [String], settings: (RunSettings) -> Void) -> RunResults {
         let initalSettings = RunSettings()
         settings(initalSettings)
         

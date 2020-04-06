@@ -27,7 +27,7 @@ public class AskSettings<T: ArgConvertibleType> {
      - parameter invalidIfTrue: If true is returned, then the user input was invalid, if false, the 
                                 user input was valid.
      */
-    public func addInvalidCase(_ description: String, invalidIfTrue: @escaping ((T) -> Bool)) {
+    public func addInvalidCase(_ description: String, invalidIfTrue: @escaping (T) -> Bool) {
         invalidClousures.append((invalidIfTrue, description))
     }
     

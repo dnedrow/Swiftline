@@ -56,7 +56,7 @@ public func run(_ command: String, args: [String]) -> RunResults {
  
  - returns: RunResults describing the command results
  */
-public func run(_ command: String, settingsBlock: ((RunSettings) -> Void)) -> RunResults {
+public func run(_ command: String, settingsBlock: (RunSettings) -> Void) -> RunResults {
     return 🏃.run(command, settings: settingsBlock)
 }
 
@@ -70,7 +70,7 @@ public func run(_ command: String, settingsBlock: ((RunSettings) -> Void)) -> Ru
  
  - returns: RunResults describing the command results
  */
-public func run(_ command: String, args: [String], settings: ((RunSettings) -> Void)) -> RunResults {
+public func run(_ command: String, args: [String], settings: (RunSettings) -> Void) -> RunResults {
     return 🏃.run(command, args: args, settings: settings)
 }
 

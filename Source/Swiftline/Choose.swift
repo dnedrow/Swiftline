@@ -32,7 +32,7 @@ public func choose(_ prompt: String, choices: String...) -> String {
  
  - returns: The user selected item
  */
-public func choose<T>(_ costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T {
+public func choose<T>(_ costumizationBlock: (ChooseSettings<T>) -> Void) -> T {
     
     let settings = getChooseSettings(costumizationBlock)
     return choose(settings, type: T.self)
@@ -48,7 +48,7 @@ public func choose<T>(_ costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T 
  
  - returns: The user selected item
  */
-public func choose<T>(_ prompt: String, type: T.Type, costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T {
+public func choose<T>(_ prompt: String, type: T.Type, costumizationBlock: (ChooseSettings<T>) -> Void) -> T {
     
     let settings = getChooseSettings(costumizationBlock)
     settings.promptQuestion = prompt
@@ -64,7 +64,7 @@ public func choose<T>(_ prompt: String, type: T.Type, costumizationBlock: ((Choo
  
  - returns: The user selected item
  */
-public func choose<T>(_ type: T.Type, costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T {
+public func choose<T>(_ type: T.Type, costumizationBlock: (ChooseSettings<T>) -> Void) -> T {
     
     let settings = getChooseSettings(costumizationBlock)
     return choose(settings, type: type)
